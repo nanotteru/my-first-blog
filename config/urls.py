@@ -36,9 +36,13 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+    path('', include('blog.urls')),
+    
     path('admin/', admin.site.urls),
     #sampleアプリケーションのURLconf読み込み
     path('sample/', include('sample.urls')),
     #apiアプリケーションのURLconf読み込み
-    path('api/', include('api.urls'))
+    path('api/', include('api.urls')),
+    #blogアプリケーションのURLconf読み込み
+    path('blog/', include('blog.urls')),
     ]
